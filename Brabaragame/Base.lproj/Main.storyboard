@@ -102,7 +102,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.7415569595" green="1" blue="0.93581848089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Stoop"/>
+                                <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stop" destination="XEQ-Lf-kFx" eventType="touchUpInside" id="w5k-gs-QfE"/>
                                 </connections>
@@ -135,6 +135,7 @@
                         <outlet property="imgView1" destination="LTi-eU-oWK" id="u0A-NJ-oxK"/>
                         <outlet property="imgView2" destination="2H1-Mn-edq" id="rVh-27-Rcn"/>
                         <outlet property="imgView3" destination="w1B-kj-IW1" id="oFh-ab-ZFW"/>
+                        <outlet property="resultLabel" destination="3ew-OE-nGW" id="U3w-Hq-YY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36r-fp-lv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
