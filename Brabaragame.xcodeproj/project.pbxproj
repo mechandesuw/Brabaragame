@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6084DF5A2261A17400CB48DE /* tail.png in Resources */ = {isa = PBXBuildFile; fileRef = 6084DF582261A17400CB48DE /* tail.png */; };
+		6084DF5B2261A17400CB48DE /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6084DF592261A17400CB48DE /* bar.png */; };
 		608E9AD32260E16600915BAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E9AD22260E16600915BAD /* AppDelegate.swift */; };
 		608E9AD52260E16600915BAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E9AD42260E16600915BAD /* ViewController.swift */; };
 		608E9AD82260E16600915BAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608E9AD62260E16600915BAD /* Main.storyboard */; };
@@ -14,8 +16,6 @@
 		608E9ADD2260E16800915BAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608E9ADB2260E16800915BAD /* LaunchScreen.storyboard */; };
 		608E9AE82260E16800915BAD /* BrabaragameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E9AE72260E16800915BAD /* BrabaragameTests.swift */; };
 		608E9AF32260E16800915BAD /* BrabaragameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E9AF22260E16800915BAD /* BrabaragameUITests.swift */; };
-		608E9B032260F17E00915BAD /* tail.png in Resources */ = {isa = PBXBuildFile; fileRef = 608E9B012260F17E00915BAD /* tail.png */; };
-		608E9B042260F17E00915BAD /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 608E9B022260F17E00915BAD /* bar.png */; };
 		608E9B062260FBAD00915BAD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E9B052260FBAD00915BAD /* GameViewController.swift */; };
 		608E9B082260FBF300915BAD /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E9B072260FBF300915BAD /* RankingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6084DF582261A17400CB48DE /* tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tail.png; sourceTree = "<group>"; };
+		6084DF592261A17400CB48DE /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		608E9ACF2260E16600915BAD /* Brabaragame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brabaragame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608E9AD22260E16600915BAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608E9AD42260E16600915BAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,8 +53,6 @@
 		608E9AEE2260E16800915BAD /* BrabaragameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrabaragameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		608E9AF22260E16800915BAD /* BrabaragameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrabaragameUITests.swift; sourceTree = "<group>"; };
 		608E9AF42260E16800915BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		608E9B012260F17E00915BAD /* tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tail.png; sourceTree = "<group>"; };
-		608E9B022260F17E00915BAD /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		608E9B052260FBAD00915BAD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		608E9B072260FBF300915BAD /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6084DF572261A17400CB48DE /* Barabara素材 */ = {
+			isa = PBXGroup;
+			children = (
+				6084DF582261A17400CB48DE /* tail.png */,
+				6084DF592261A17400CB48DE /* bar.png */,
+			);
+			name = "Barabara素材";
+			path = "../../Barabara素材";
+			sourceTree = "<group>";
+		};
 		608E9AC62260E16600915BAD = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +130,7 @@
 		608E9AE62260E16800915BAD /* BrabaragameTests */ = {
 			isa = PBXGroup;
 			children = (
-				608E9B002260F17E00915BAD /* Barabara素材 */,
+				6084DF572261A17400CB48DE /* Barabara素材 */,
 				608E9AE72260E16800915BAD /* BrabaragameTests.swift */,
 				608E9AE92260E16800915BAD /* Info.plist */,
 			);
@@ -134,15 +144,6 @@
 				608E9AF42260E16800915BAD /* Info.plist */,
 			);
 			path = BrabaragameUITests;
-			sourceTree = "<group>";
-		};
-		608E9B002260F17E00915BAD /* Barabara素材 */ = {
-			isa = PBXGroup;
-			children = (
-				608E9B012260F17E00915BAD /* tail.png */,
-				608E9B022260F17E00915BAD /* bar.png */,
-			);
-			path = "Barabara素材";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +260,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608E9B032260F17E00915BAD /* tail.png in Resources */,
-				608E9B042260F17E00915BAD /* bar.png in Resources */,
+				6084DF5A2261A17400CB48DE /* tail.png in Resources */,
+				6084DF5B2261A17400CB48DE /* bar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

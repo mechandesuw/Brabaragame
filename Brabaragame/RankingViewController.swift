@@ -9,13 +9,31 @@
 import UIKit
 
 class RankingViewController: UIViewController {
+    
+    @IBOutlet var rankingLabel1: UILabel! //一位のスコアを表示するラベル
+    @IBOutlet var rankingLabel2: UILabel! //一位のスコアを表示するラベル
+    @IBOutlet var rankingLabel3: UILabel! //一位のスコアを表示するラベル
+    
+    let defaults: UserDefaults = UserDefaults.standard  //スコアの保持をするための変数
+    
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //"score1"というキーの値を取得して表示
+        rankigLabell1.text = String(defaults.integer(forKey: "score1"))
+        //"score2"というキーの値を取得して表示
+        rankigLabel2.text = String(defaults.integer(forKey: "score2"))
+        //"score1"というキーの値を取得して表示
+        rankigLabel3.text = String(defaults.integer(forKey: "score3"))
+    }
 
         // Do any additional setup after loading the view.
-    }
     
+    
+    @IBAction func toTop() {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+}
 
     /*
     // MARK: - Navigation
@@ -27,4 +45,4 @@ class RankingViewController: UIViewController {
     }
     */
 
-}
+

@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
     
     var positionX: [CGFloat] = [0.0, 0.0, 0.0] //画像の位置の配列
     
-    var dx: [CGFloat] = [1.0, 0.5 ,-1.0]//画像を動かす幅の配列
+    var dx: [CGFloat] = [1.0, 0.5 , -1.0]//画像を動かす幅の配列
 
 
     func start() {
@@ -39,8 +39,8 @@ class GameViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            positionX = [width/2, width/2, width/2] //画像の位置を画像幅の中心にする
-            self.start()//前ページで書いたstartのメソッドを呼び出
+            positionX =  [width/2, width/2, width/2] //画像の位置を画像幅の中心にする
+            self.start()//前ページで書いたstartのメソッドを呼び出す
     }
     
     @objc func up() {
@@ -50,16 +50,61 @@ class GameViewController: UIViewController {
                 dx[i] = dx[i] * (-1)
             }
             positionX[i] += dx[i] //画像の位置をddx分ずらす
-            }
+            
+        }
         imgView1.center.x = positionX[0] //上の画像をずらした位置に移動させる
         imgView2.center.x = positionX[1] //真ん中の画像をずらした位置に移動させる
+        imgView3.center.x = positionX[2] //下の画像をずらした位置に移動させる
         
     }
     //ストップボタンを押したら
     @IBAction func stop() {
         if timer.isValid == true {   //もしタイマーが動いていたら
             timer.invalidate()  //タイマーを止める　（無効にする）
+            
+            for i in 0..<3 {
+                score = score - abs(Int(width/2 - positionX[i]))*2 //スコアの計算をする
+            }
+            resultLabel.text = "Score : " + String(score) //結果ラベルにスコアを表示する
+            resultLabel.isHidden = false //結果ラベルを隠さない（現す）
+            
+            let highScore1: Int = defaults.integer(forKey: "score1") //ユーザーデフォルトに””score1"というキーの値を取得
+            let highScore2: Int = defaults.integer(forKey: "score2") //"score2"というキーの値の取得
+            let highScore3: Int = defaults.integer(forKey: "score3") //"score3"というキーの値の取得
+            
+            if score > highScore1 { //ランキング１位の記録を更新したら
+                defaults.set(score, forKey: "score1") //"score1"というキーでscoreを保存
+                defaults.set(score, forKey: "score2") //"score2"というキーでhighscore1(元1位の記録)を保存
+                defaults.set(score, forKey: "score3")//"score3"というキーでhighscore2(元2位の記録)を保
+           } else if score > highScore2 { //ランキング２位の記録を更新したら
+            
+            defaults.set(score,forKey: "score2") //"score2というキーでscoreを保存"
+            defaults.set(highScore2,forKey: "score3") //"score2というキーでscoreを保存"
+        
+           } else if score > highScore3 { //ランキング3位の記録を更新したら
+            
+            defaults.set(score, forKey: "score3") //"score3"というキーでscoreを保存
+            
         }
+            defaults.synchronize()
+        
+    }
+        
+    }
+    
+    
+        @IBAction func retry() {
+        score = 1000 //スコアの値をリセットする
+        positionX = [width/2,width/2,width/2]
+        if timer.isValid == false {
+            self.start()  //スタートボタンを呼び出す
+        }
+        
+    }
+    
+    @IBAction func toTop() {
+        self.dismiss(animated: true, completion: nil)
+        
     }
     
             
@@ -77,5 +122,6 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 

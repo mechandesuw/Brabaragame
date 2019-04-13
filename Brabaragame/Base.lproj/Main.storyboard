@@ -83,6 +83,9 @@
                                 <color key="backgroundColor" red="0.7415569595" green="1" blue="0.93581848089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Topへ"/>
+                                <connections>
+                                    <action selector="toTop" destination="XEQ-Lf-kFx" eventType="touchUpInside" id="84x-RW-7x2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeM-Mz-IHI">
                                 <rect key="frame" x="283" y="68" width="95" height="55"/>
@@ -90,6 +93,9 @@
                                 <color key="backgroundColor" red="0.7415569595" green="1" blue="0.93581848089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="リトライ"/>
+                                <connections>
+                                    <action selector="retry" destination="XEQ-Lf-kFx" eventType="touchUpInside" id="6yI-yq-soG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2Z-fO-7I8">
                                 <rect key="frame" x="150" y="531" width="115" height="63"/>
@@ -98,7 +104,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Stoop"/>
                                 <connections>
-                                    <action selector="stop" destination="XEQ-Lf-kFx" eventType="touchUpInside" id="jS3-qs-QJU"/>
+                                    <action selector="stop" destination="XEQ-Lf-kFx" eventType="touchUpInside" id="w5k-gs-QfE"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tail.png" translatesAutoresizingMaskIntoConstraints="NO" id="LTi-eU-oWK">
@@ -126,10 +132,9 @@
                         <viewLayoutGuide key="safeArea" id="7kY-cD-VqW"/>
                     </view>
                     <connections>
-                        <outlet property="imgView1" destination="LTi-eU-oWK" id="ivR-Rn-k5L"/>
-                        <outlet property="imgView2" destination="2H1-Mn-edq" id="waK-Yf-avt"/>
-                        <outlet property="imgView3" destination="w1B-kj-IW1" id="cKa-CK-4YG"/>
-                        <outlet property="resultLabel" destination="3ew-OE-nGW" id="vQG-Ep-ddy"/>
+                        <outlet property="imgView1" destination="LTi-eU-oWK" id="u0A-NJ-oxK"/>
+                        <outlet property="imgView2" destination="2H1-Mn-edq" id="rVh-27-Rcn"/>
+                        <outlet property="imgView3" destination="w1B-kj-IW1" id="oFh-ab-ZFW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36r-fp-lv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,6 +154,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.7415569595" green="1" blue="0.93581848089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Topへ"/>
+                                <connections>
+                                    <action selector="toTop" destination="RE0-oN-UB8" eventType="touchUpInside" id="tZW-Us-kkl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ランキング" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-rL-2mx">
                                 <rect key="frame" x="118" y="149" width="184" height="62"/>
@@ -203,6 +211,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vgu-Tc-LJg"/>
                     </view>
+                    <connections>
+                        <outlet property="rankingLabel1" destination="dAG-xv-ruT" id="Lz3-L2-nzG"/>
+                        <outlet property="rankingLabel2" destination="Dr0-qm-SuU" id="bHk-yH-SVL"/>
+                        <outlet property="rankingLabel3" destination="Z7R-Ag-Qnt" id="jUE-Rd-gLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdR-ne-x2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
